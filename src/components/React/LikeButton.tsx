@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import '@/components/React/LikeButton.css'
-import type { TablesInsert, Tables } from '@/../database.types';
+import type { TablesInsert } from '@/../database.types';
 
 // Use database types for analytics data
 type AnalyticsData = Pick<TablesInsert<'post_likes'>, 'user_agent' | 'language' | 'referrer' | 'timezone'> & {
@@ -42,18 +42,19 @@ export default function LikeButton({ slug }: LikeButtonProps) {
           }
         });
         
-        console.log('Fetching fresh like count for:', slug, 'Status:', response.status);
+        
         
         if (response.ok) {
           const data: LikeResponse = await response.json();
           setLikes(data.likes);
-          console.log('Fresh like count loaded:', data.likes);
+          
         } else {
           setLikes(0);
         }
       } catch (error: unknown) {
-        console.error('Error fetching like count:', error);
+        
         setLikes(0);
+        
       } finally {
         setIsLoading(false);
       }
@@ -66,7 +67,7 @@ export default function LikeButton({ slug }: LikeButtonProps) {
   const handleLike = async (): Promise<void> => {
     if (isLiking) return;
     
-    console.log('Like button clicked, slug:', slug);
+    
     setIsLiking(true);
     setError('');
     
@@ -79,7 +80,7 @@ export default function LikeButton({ slug }: LikeButtonProps) {
     }
     
     try {
-      console.log('Sending POST request to /api/likes/add');
+      
       
       // Collect analytics data
       const analyticsData: AnalyticsData = {
@@ -102,11 +103,11 @@ export default function LikeButton({ slug }: LikeButtonProps) {
         }),
       });
 
-      console.log('Response status:', response.status, response.statusText);
+      
 
       if (response.ok) {
         const data: LikeResponse = await response.json();
-        console.log('Like added successfully:', data);
+        
         
         // Animate count update
         setTimeout(() => {
@@ -133,7 +134,7 @@ export default function LikeButton({ slug }: LikeButtonProps) {
           message: 'Unable to add like. Please try again.',
           likes: 0
         }));
-        console.error('Failed to add like:', response.status, response.statusText, errorData);
+        
         
         // Show user-friendly error message from server or fallback
         setError(errorData.message || 'Unable to add like. Please try again.');
@@ -143,7 +144,7 @@ export default function LikeButton({ slug }: LikeButtonProps) {
       if (buttonRef.current) {
         buttonRef.current.classList.remove('liked');
       }
-      console.error('Error adding like:', error);
+      
       
       // Show user-friendly error message
       setError('Connection error. Please check your internet and try again.');

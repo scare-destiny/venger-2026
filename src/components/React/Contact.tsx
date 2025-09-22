@@ -5,7 +5,6 @@ import { Border } from '@/components/React/Border';
 import { Button } from '@/components/React/Button';
 import { Container } from '@/components/React/Container';
 import { PageIntro } from '@/components/React/PageIntro';
-import Socials from "@/components/Socials.astro";
 
 function TextInput({ label, ...props }: React.ComponentPropsWithoutRef<'input'> & { label: string }) {
   const id = useId();
