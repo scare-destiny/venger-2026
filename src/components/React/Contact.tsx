@@ -107,7 +107,7 @@ function ContactForm() {
 
 function ContactDetails() {
   return (
-    <>
+    <div>
       <h2 className="font-display text-base font-semibold text-neutral-950">Still hesitate?</h2>
       <p className="mt-6 text-base text-neutral-600">
         I'm always on the lookout for exciting new projects. Let's discuss yours!
@@ -138,7 +138,7 @@ function ContactDetails() {
         <h2 className="font-display text-base font-semibold text-neutral-950">Find me here</h2>
       Place for socials 
       </Border> */}
-    </>
+    </div>
   );
 }
 
@@ -153,8 +153,10 @@ export default function Contact() {
 
       <Container className="my-24 sm:my-32 lg:my-40">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-24 ">
+          <div className='order-1 lg:order-0'>
           <ContactDetails />
-          <ContactForm />
+          </div>
+            <ContactForm />
         </div>
       </Container>
     </>
