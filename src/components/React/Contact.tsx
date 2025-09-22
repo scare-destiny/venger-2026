@@ -97,7 +97,7 @@ function ContactForm() {
           </div>
         </div>
         <Button type="submit" className="mt-10">
-          Let’s work together
+          Contact now
         </Button>
         {responseMessage && <p>{responseMessage}</p>}
       </form>
