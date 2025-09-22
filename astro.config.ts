@@ -22,7 +22,8 @@ export default defineConfig({
   site: SITE.website,
 
   redirects: {
-    '/blog/data-engineering-primer-part-1': '/posts/data-engineering-primer-part-1'
+    '/blog/data-engineering-primer-part-1': '/posts/data-engineering-primer-part-1',
+    '/blog/analytical-tools': '/posts/posthog-vs-clarity-and-hotjar'
   },
 
   integrations: [sitemap({

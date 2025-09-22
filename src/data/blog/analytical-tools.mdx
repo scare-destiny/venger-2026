@@ -1,0 +1,166 @@
+---
+pubDatetime: 2024-08-15T15:25:24+00:00
+title: Analytical Tools - Hotjar, Microsoft Clarity, and PostHog
+featured: false
+draft: false
+tags:
+  - data
+description: A dive into three popular analytical tools and how to choose the right one for your needs
+slug: 'posthog-vs-clarity-and-hotjar'
+---
+
+
+
+Lately, we've been experimenting with three tools: <a href='https://hotjar.com/' target='_blank'>Hotjar</a>, <a href='https://clarity.microsoft.com/' target='_blank'>Microsoft Clarity</a>, and <a href='https://posthog.com/' target='_blank'>PostHog</a>. Each has its pros and cons and caters to specific audiences and use cases. We want to share our experience and help you decide which tool might work for you.
+
+![Abstract image of analytical process](@/assets/images/analytical-tools/analytical-tools.svg)
+
+## 1. Hotjar
+
+We initially used <a href='https://hotjar.com/' target='_blank'>Hotjar</a> as a complement to Google Analytics' quantitative data. It offers:
+- Recordings
+- Heatmaps
+- Funnels
+- Feedback (surveys and interviews)
+- Interviews
+
+We used it for a couple of weeks on several projects. Our goal was to find a tool that would support quantitative data (see where users click, what frustrates them, watch session recordings) we have in GA4, and Hotjar was the first product that came to mind.
+
+However, Hotjar had too many features not relevant to our goals, which they actively promote both inside the product and in their emails. 
+
+![Hotjar Dashboard](@/assets/images/analytical-tools/hotjar-dashboard.jpeg)
+
+Then we discovered that Microsoft Clarity offers similar features for free, compared to Hotjar's freemium model (which promotes paid tiers to get full value).
+
+**Verdict:** We don't see any reason to use Hotjar. If you already have Google Analytics 4 and only need qualitative data like recordings and heatmaps without product analytics, then Microsoft Clarity is a better choice.
+
+## 2. Microsoft Clarity
+
+We discovered this tool randomly on <a href='https://www.reddit.com/r/PPC/comments/1ef635n/anyone_used_microsoft_clarity/' target='_blank'>Reddit</a>. It's completely free, so we moved all clients' projects there.
+
+<a href='https://clarity.microsoft.com/' target='_blank'>Clarity</a> has all the features Hotjar offers, minus feedback integrations (which we don't think are worth paying for). Clarity does have a one-way integration with Google Analytics, but we haven't tried it and never felt the need to do so.
+
+Their features look quite spartan compared to Hotjar, which was a massive plus and a significant boost to our clarity and productivity.
+
+![Microsoft Clarity Dashboard](@/assets/images/analytical-tools/clarity-dashboard.png)
+
+Also, their automatically generated dashboard is quite comprehensive. It effectively uses colors, combines different types of charts, and metrics to provide a good overview of the main metrics.
+
+![Microsoft Clarity Dashboard](@/assets/images/analytical-tools/clarity-main.png)
+
+I didn't experience the same aha moment with Hotjar. Their default dashboard just looks... normal. Like a random report in GA4, which doesn't bring you either excitement or clarity.
+
+In terms of the main features' effectiveness, I didn't notice a big or noticeable difference between the two products. Both provide heatmaps and session recordings with good quality and hide all personal data.
+
+**Verdict:** A handy tool for conversion rate optimization, boosting landing page performance, and gathering qualitative data. Being completely free makes it the best choice if you don't need advanced features and product analytics.
+
+## 3. PostHog
+
+<a href='https://posthog.com/' target='_blank'>PostHog</a> is the clear leader and the tool we liked the most due to its robust features, <a href='https://github.com/PostHog/posthog' target='_blank'>open-source nature</a>, and future direction.
+
+It offers everything the other tools have:
+- Quantitative web and product data analytics
+- Session recordings
+- Heatmaps
+- Experiments (A/B Tests)
+- Surveys and feedback
+
+Plus:
+- Bi-directional data flow and integration with third-party tools
+- Both client and server-side integration (similar to <a href='https://developers.google.com/analytics/devguides/collection/protocol/ga4' target='_blank'>Measurement Protocol</a> but more robust)
+- Data warehouse
+
+All of that comes with a generous free tier, which is enough for most websites. We use it for several websites, and it is more than enough for us. PostHog even states that 90% of their customers use it for free. 
+
+PostHog has indicated that they aim to become a Customer Data Platform, similar to Segment. Hopefully, they will make it more affordable, as we know of cases where companies wanted to move to Segment but didn't because of the high price.
+
+Also, they provide server-side tracking (aka Reverse Proxy). This means that events are less likely to be intercepted by tracking blockers. You'll be able to capture more data. We've already written about <a href='/blog/server-side-tracking'>server-side tracking in more detail</a>.
+
+## Final Verdict
+
+<div className="overflow-x-auto">
+  <table className="min-w-full bg-white border border-gray-300">
+    <thead>
+      <tr className="bg-gray-100">
+        <th className="py-2 px-4 border-b">Feature</th>
+        <th className="py-2 px-4 border-b">Hotjar</th>
+        <th className="py-2 px-4 border-b">Microsoft Clarity</th>
+        <th className="py-2 px-4 border-b">PostHog</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className="py-2 px-4 border-b">Pricing Model</td>
+        <td className="py-2 px-4 border-b">Freemium</td>
+        <td className="py-2 px-4 border-b">Free</td>
+        <td className="py-2 px-4 border-b">Generous Free Tier</td>
+      </tr>
+      <tr>
+        <td className="py-2 px-4 border-b">Session Recordings</td>
+        <td className="py-2 px-4 border-b">✅</td>
+        <td className="py-2 px-4 border-b">✅</td>
+        <td className="py-2 px-4 border-b">✅</td>
+      </tr>
+      <tr>
+        <td className="py-2 px-4 border-b">Heatmaps</td>
+        <td className="py-2 px-4 border-b">✅</td>
+        <td className="py-2 px-4 border-b">✅</td>
+        <td className="py-2 px-4 border-b">✅</td>
+      </tr>
+      <tr>
+        <td className="py-2 px-4 border-b">Funnels</td>
+        <td className="py-2 px-4 border-b">✅</td>
+        <td className="py-2 px-4 border-b">❌</td>
+        <td className="py-2 px-4 border-b">✅</td>
+      </tr>
+      <tr>
+        <td className="py-2 px-4 border-b">Feedback/Surveys</td>
+        <td className="py-2 px-4 border-b">✅</td>
+        <td className="py-2 px-4 border-b">❌</td>
+        <td className="py-2 px-4 border-b">✅</td>
+      </tr>
+      <tr>
+        <td className="py-2 px-4 border-b">Product Analytics</td>
+        <td className="py-2 px-4 border-b">❌</td>
+        <td className="py-2 px-4 border-b">❌</td>
+        <td className="py-2 px-4 border-b">✅</td>
+      </tr>
+      <tr>
+        <td className="py-2 px-4 border-b">A/B Testing</td>
+        <td className="py-2 px-4 border-b">❌</td>
+        <td className="py-2 px-4 border-b">❌</td>
+        <td className="py-2 px-4 border-b">✅</td>
+      </tr>
+      <tr>
+        <td className="py-2 px-4 border-b">Server-side Tracking</td>
+        <td className="py-2 px-4 border-b">❌</td>
+        <td className="py-2 px-4 border-b">❌</td>
+        <td className="py-2 px-4 border-b">✅</td>
+      </tr>
+      <tr>
+        <td className="py-2 px-4 border-b">Data Warehouse</td>
+        <td className="py-2 px-4 border-b">❌</td>
+        <td className="py-2 px-4 border-b">❌</td>
+        <td className="py-2 px-4 border-b">✅</td>
+      </tr>
+      <tr>
+        <td className="py-2 px-4 border-b">Open Source</td>
+        <td className="py-2 px-4 border-b">❌</td>
+        <td className="py-2 px-4 border-b">❌</td>
+        <td className="py-2 px-4 border-b">✅</td>
+      </tr>
+      <tr>
+        <td className="py-2 px-4 border-b">Best For</td>
+        <td className="py-2 px-4 border-b">Maybe for enterprise</td>
+        <td className="py-2 px-4 border-b">All websites and landing pages that want to level up their game</td>
+        <td className="py-2 px-4 border-b">Startups, products, and companies that want to experiment</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+If you only need qualitative data to complement your quantitative data, <a href='https://clarity.microsoft.com/' target='_blank'>Microsoft Clarity</a> is ideal. It's a simple and easy tool to get started with optimization and experimentation.
+
+If you're a startup with a product, <a href='https://posthog.com/' target='_blank'>PostHog</a> is the best tool on the market. You'll get solid web and product data, qualitative data, a data warehouse, custom integrations, and a generous free tier.
+
+Need help or have some questions? Feel free to contact us!
