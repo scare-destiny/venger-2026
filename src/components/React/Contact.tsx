@@ -152,10 +152,8 @@ export default function Contact() {
       </PageIntro>
 
       <Container className="my-24 sm:my-32 lg:my-40">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-24 ">
-          <div className='order-1 lg:order-0'>
+        <div className="flex flex-col-reverse gap-x-8 gap-y-24 ">
           <ContactDetails />
-          </div>
             <ContactForm />
         </div>
       </Container>
