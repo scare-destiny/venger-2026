@@ -12,7 +12,5 @@ export default [
         ...globals.node,
       },
     },
-  },
-  { rules: { "no-console": "error" } },
-  { ignores: ["dist/**", ".astro", "public/pagefind/**"] },
+  }
 ];

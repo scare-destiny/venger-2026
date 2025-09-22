@@ -52,7 +52,7 @@ export default function LikeButton({ slug }: LikeButtonProps) {
           setLikes(0);
         }
       } catch (error: unknown) {
-        
+        console.log(error)
         setLikes(0);
         
       } finally {
@@ -144,7 +144,7 @@ export default function LikeButton({ slug }: LikeButtonProps) {
       if (buttonRef.current) {
         buttonRef.current.classList.remove('liked');
       }
-      
+      console.error('Error adding like:', error);
       
       // Show user-friendly error message
       setError('Connection error. Please check your internet and try again.');
