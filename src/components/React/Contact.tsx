@@ -144,8 +144,8 @@ function ContactDetails() {
 
 export default function Contact() {
   return (
-    <>
-      <PageIntro eyebrow="Contact me" title="Have an idea for the project or some feedback?" >
+    <div className='max-w-app m-auto'>
+      <PageIntro centered eyebrow="Contact me" title="Have an idea for the project or some feedback?" >
         <p>
         Text me back!
         </p>
@@ -159,6 +159,6 @@ export default function Contact() {
             <ContactForm />
         </div>
       </Container>
-    </>
+    </div>
   );
 }
