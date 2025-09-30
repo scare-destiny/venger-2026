@@ -1,0 +1,110 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+---
+
+<Layout title="Privacy Policy — Eugene Venger" description="How I collect, use, and protect your data on venger.me.">
+   
+
+    <Header/>
+
+    <main class="max-w-prose m-auto px-4 py-12">
+      <h1>Privacy Policy</h1>
+      <p><strong>Effective date:</strong> {new Date().toISOString().slice(0, 10)}</p>
+
+      <p>
+        This page explains how I (Eugene Venger) collect, use, and protect personal data on
+        <a href="https://www.venger.me/"> venger.me</a>. I operate as an independent contractor based in Poland
+        and process personal data in accordance with the GDPR.
+      </p>
+
+      <h2>Data Controller</h2>
+      <p>
+        <strong>Controller:</strong> Eugene Venger<br/>
+        <strong>Location:</strong> Poland<br/>
+        <strong>Email:</strong> <a href="mailto:eugene@venger.me">eugene@venger.me</a>
+      </p>
+
+      <h2>What data I collect</h2>
+      <ul>
+        <li><strong>Contact form</strong>: name, email, your message, and selected service interest.</li>
+        <li><strong>Email</strong>: if you email me directly, I will process the data you send.</li>
+        <li><strong>Site analytics</strong>: privacy-friendly, aggregate usage metrics (see Analytics below).</li>
+        <li><strong>Technical logs</strong>: IP address and user agent may appear in server logs for security/abuse prevention.</li>
+      </ul>
+
+      <h2>Why I collect it (legal bases)</h2>
+      <ul>
+        <li><strong>Respond to inquiries and provide proposals</strong> — contract initiation/legitimate interest.</li>
+        <li><strong>Provide and improve the site</strong> — legitimate interest.</li>
+        <li><strong>Security and fraud prevention</strong> — legitimate interest.</li>
+        <li><strong>Legal obligations</strong> — where applicable (e.g., accounting records).</li>
+      </ul>
+
+      <h2>Analytics</h2>
+      <p>
+        I use Umami Analytics, a privacy-friendly and cookieless analytics tool, to measure aggregate traffic and
+        content performance. Umami does not track individuals across sites and does not build user profiles.
+        Metrics include page views, referrers, devices, and countries in aggregate form.
+      </p>
+
+      <h2>Cookies</h2>
+      <p>
+        The site is designed to work without non-essential cookies. If any cookies are ever used, they will be
+        limited to what is necessary for functionality or security. You can block cookies at the browser level.
+      </p>
+
+      <h2>How long I keep data</h2>
+      <ul>
+        <li><strong>Contact messages</strong>: up to 12 months after last interaction, or longer if we start a project.</li>
+        <li><strong>Business records</strong>: retained as required by tax/accounting law.</li>
+        <li><strong>Analytics aggregates</strong>: retained for trend analysis without identifying individuals.</li>
+      </ul>
+
+      <h2>Sharing and processors</h2>
+      <p>
+        I may share data with service providers strictly as needed to run the site and communications (e.g., hosting,
+        email, analytics). These providers act as processors and only process data under my instructions.
+      </p>
+
+      <h2>International transfers</h2>
+      <p>
+        If data is transferred outside the EEA, I rely on appropriate safeguards such as the European Commission’s
+        Standard Contractual Clauses or adequacy decisions.
+      </p>
+
+      <h2>Your rights (GDPR)</h2>
+      <ul>
+        <li>Access your data</li>
+        <li>Rectify inaccurate data</li>
+        <li>Erase data (right to be forgotten)</li>
+        <li>Restrict or object to processing</li>
+        <li>Data portability</li>
+        <li>Withdraw consent where processing is based on consent</li>
+      </ul>
+      <p>
+        To exercise rights, email <a href="mailto:eugene@venger.me">eugene@venger.me</a>. You also have the right to
+        lodge a complaint with the Polish Data Protection Authority (UODO):
+        <a href="https://uodo.gov.pl/" target="_blank" rel="noopener noreferrer">uodo.gov.pl</a>.
+      </p>
+
+      <h2>Security</h2>
+      <p>
+        I implement reasonable technical and organizational measures to protect personal data. No system is 100%
+        secure; risk is minimized by collecting the minimum necessary data and limiting retention.
+      </p>
+
+      <h2>Children</h2>
+      <p>
+        This site is not intended for children and I do not knowingly collect children’s data.
+      </p>
+
+      <h2>Changes</h2>
+      <p>
+        I may update this policy from time to time. Material changes will be reflected on this page with an updated
+        effective date.
+      </p>
+    </main>
+    <Footer/>
+</Layout>
