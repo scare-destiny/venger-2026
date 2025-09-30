@@ -116,21 +116,32 @@ function ContactDetails() {
       {/* <Offices className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2" /> */}
 
       <Border className="mt-16 pt-16">
-        <h2 className="font-display text-base font-semibold text-neutral-950">Email me</h2>
+        <h2 className="font-display text-base font-semibold text-neutral-950">Contat Info</h2>
         <dl className="mt-6 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
-          {[
-            ['Work', 'eugene@venger.me'],
-            // ['Press', 'press@studioagency.com'],
-          ].map(([label, email]) => (
-            <div key={email}>
-              <dt className="font-semibold text-neutral-950">{label}</dt>
-              <dd>
-                <a href={`mailto:${email}`} className="text-neutral-600 hover:text-neutral-950">
-                  {email}
-                </a>
-              </dd>
-            </div>
-          ))}
+          <div>
+            <dt className="font-semibold text-neutral-950">Name</dt>
+            <dd className="text-neutral-600">Ievgen Venger</dd>
+          </div>
+          <div>
+            <dt className="font-semibold text-neutral-950">Email</dt>
+            <dd>
+              <a href="mailto:eugene@venger.me" className="text-neutral-600 hover:text-neutral-950">
+                eugene@venger.me
+              </a>
+            </dd>
+          </div>
+          <div>
+            <dt className="font-semibold text-neutral-950">Phone</dt>
+            <dd>
+              <a href="tel:+48508737592" className="text-neutral-600 hover:text-neutral-950">
+                +48 508 737 592
+              </a>
+            </dd>
+          </div>
+          <div>
+            <dt className="font-semibold text-neutral-950">Address</dt>
+            <dd className="text-neutral-600">Stalowa 13, 03-425 Warsaw, Poland</dd>
+          </div>
         </dl>
       </Border>
 
