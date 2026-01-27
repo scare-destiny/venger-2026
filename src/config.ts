@@ -3,7 +3,7 @@ export const SITE = {
     author: "Eugene Venger",
     profile: "https://www.venger.me/",
     desc: "My space for thoughts, opinions and experiments. Data, cooking, books.",
-    title: "Eugene Venger",
+    title: "Eugene Venger - Data Engineer, cooking, books.",
     ogImage: "venger-og.png",
     lightAndDarkMode: false,
     postPerIndex: 4,
