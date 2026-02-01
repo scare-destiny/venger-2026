@@ -5,7 +5,7 @@ export const SITE = {
     desc: "My space for thoughts, opinions and experiments. Data, cooking, books.",
     title: "Eugene Venger - Data Engineer, cooking, books.",
     ogImage: "venger-og.png",
-    lightAndDarkMode: false,
+    lightAndDarkMode: true,
     postPerIndex: 4,
     postPerPage: 4,
     scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
