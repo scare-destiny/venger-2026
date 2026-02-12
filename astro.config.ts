@@ -39,9 +39,10 @@ export default defineConfig({
       wrap: false,
       transformers: [
         transformerFileName({ style: "v2", hideDot: false }),
-        transformerNotationHighlight(),
-        transformerNotationWordHighlight(),
-        transformerNotationDiff({ matchAlgorithm: "v3" }),
+        transformerNotationHighlight() as unknown,
+        transformerNotationWordHighlight() as unknown,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        transformerNotationDiff({ matchAlgorithm: "v3" }) as any,
       ],
     },
   },
