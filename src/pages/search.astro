@@ -13,6 +13,7 @@ const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : "/";
   <Header />
   <Main pageTitle="Search" pageDesc="Search any article ...">
     <div id="pagefind-search" transition:persist data-backurl={backUrl}></div>
+    ${console.log(backUrl)}
   </Main>
   <Footer />
 </Layout>
@@ -46,14 +47,14 @@ const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : "/";
       const search = new PagefindUI({
         element: "#pagefind-search",
         showSubResults: true,
-        showImages: false,
+        showImages: true,
         processTerm: function (term: string) {
           params.set("q", term); // Update the `q` parameter in the URL
           history.replaceState(history.state, "", "?" + params.toString()); // Push the new URL without reloading
 
           const backUrl = pageFindSearch?.dataset?.backurl;
           sessionStorage.setItem("backUrl", backUrl + "?" + params.toString());
-
+          
           return term;
         },
       });
