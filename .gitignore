@@ -23,9 +23,9 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-# pagefind
+# # pagefind
 
-public/pagefind
+# public/pagefind
 
 # vercel 
 .vercel
