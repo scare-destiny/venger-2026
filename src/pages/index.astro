@@ -2,6 +2,8 @@
 import { getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
+import { Avatar } from "@/components/React/Avatar";
+import { Container } from "@/components/React/Container";
 import Footer from "@/components/Footer.astro";
 import Socials from "@/components/Socials.astro";
 import LinkButton from "@/components/LinkButton.astro";
@@ -30,49 +32,44 @@ console.log(`${isDev ? "DEV" : "PROD"}`);
   <Header />
   <main id="main-content" data-layout="index">
     <section id="hero" class="pt-8 pb-6">
-      <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-        Hej you!
-      </h1>
-      <a
-        target="_blank"
-        href="/rss.xml"
-        class="inline-block"
-        aria-label="rss feed"
-        title="RSS Feed"
-      >
-        <IconRss
-          width={20}
-          height={20}
-          class="scale-125 stroke-accent stroke-3 rtl:-rotate-90"
-        />
-        <span class="sr-only">RSS Feed</span>
-      </a>
-
-      <p>
-        Hey there! I'm Eugene, now in Warsaw. I work with data a lot - databases (Postgres is the best!), web analytics.
-        In my free time, I cook, I write, I share what I learn.  
-      </p>
-      <p class="pt-2">
-        Tired of consuming content elsewhere, so decided to make my own.
-      </p>
-      <!-- <p class="mt-2">
-        Read the blog posts or check
-        <LinkButton
-          class="underline decoration-dashed underline-offset-4 hover:text-accent"
-          href="https://github.com/satnaing/astro-paper#readme"
-        >
-          README
-        </LinkButton> for more info.
-      </p> -->
-      {
-        // only display if at least one social link is enabled
-        SOCIALS.length > 0 && (
-          <div class="mt-4 flex flex-col sm:flex-row sm:items-center">
-            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div>
-            <Socials />
-          </div>
-        )
-      }
+      <div class="flex flex-col items-center gap-6 sm:flex-row sm:items-start sm:gap-10">
+        <Avatar className="shrink-0" />
+        <div>
+          <h1 class="my-4 inline-flex items-center gap-3 text-4xl font-bold sm:my-0 sm:text-5xl">
+            Hej you!
+            <a
+              target="_blank"
+              href="/rss.xml"
+              class="inline-block"
+              aria-label="rss feed"
+              title="RSS Feed"
+            >
+              <IconRss
+                width={20}
+                height={20}
+                class="scale-125 stroke-accent stroke-3 rtl:-rotate-90"
+              />
+              <span class="sr-only">RSS Feed</span>
+            </a>
+          </h1>
+          
+          <p class="mt-4">
+            Hey there! I'm Eugene, now in Warsaw. I work with data a lot - databases (Postgres is the best!), web analytics.
+            In my free time, I cook, I write, I share what I learn.
+          </p>
+          <p class="pt-2">
+            Tired of consuming content elsewhere, so decided to make my own.
+          </p>
+          {
+            SOCIALS.length > 0 && (
+              <div class="mt-4 flex flex-col sm:flex-row sm:items-center">
+                {/* <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div> */}
+                <Socials />
+              </div>
+            )
+          }
+        </div>
+      </div>
     </section>
 
     <Hr />
