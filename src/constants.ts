@@ -8,7 +8,7 @@ import IconFacebook from "@/assets/icons/IconFacebook.svg";
 import IconTelegram from "@/assets/icons/IconTelegram.svg";
 import IconPinterest from "@/assets/icons/IconPinterest.svg";
 import IconInstagram from "@/assets/icons/IconInstagram.svg";
-import IconThread from '@/assets/icons/IconThread.svg'
+import IconThread from '@/assets/icons/IconThreads.svg'
 import { SITE } from "@/config";
 
 interface Social {
