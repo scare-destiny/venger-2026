@@ -8,6 +8,7 @@ import IconFacebook from "@/assets/icons/IconFacebook.svg";
 import IconTelegram from "@/assets/icons/IconTelegram.svg";
 import IconPinterest from "@/assets/icons/IconPinterest.svg";
 import IconInstagram from "@/assets/icons/IconInstagram.svg";
+import IconThread from '@/assets/icons/IconThread.svg'
 import { SITE } from "@/config";
 
 interface Social {
@@ -25,22 +26,28 @@ export const SOCIALS: Social[] = [
     icon: IconGitHub,
   },
   {
+    name: "Threads",
+    href: "https://www.threads.com/@eugene.venger",
+    linkTitle: `${SITE.author} on Threads`,
+    icon: IconThread,
+  },
+  {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/eugenevenger/",
     linkTitle: `${SITE.author} on LinkedIn`,
     icon: IconLinkedin,
   },
   {
+    name: "Instagram",
+    href: "https://www.instagram.com/eugene.venger/",
+    linkTitle: `${SITE.author} on Instagram`,
+    icon: IconInstagram,
+  },  
+  {
     name: "Mail",
     href: "mailto:eugene@venger.me",
     linkTitle: `Send an email to ${SITE.author}`,
     icon: IconMail,
-  },
-  {
-    name: "Instagram",
-    href: "https://www.instagram.com/eugene.venger/",
-    linkTitle: `${SITE.author} on X`,
-    icon: IconInstagram,
   },
 ] as const;
 
