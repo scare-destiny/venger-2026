@@ -209,10 +209,10 @@ export default function Links() {
       isPrimary: true
     },
     {
-      title: 'Email Marketing Checklist',
-      description: 'Get an impressive 65-80% open rate and beyond (soon will be a massive update!)',
+      title: 'Діалектично-поведінкова терапія',
+      description: 'Безкоштовний курс українською — навички для керування емоціями, стресом і стосунками',
       icon: <MailOpen className='w-6 h-6'/>,
-      href: 'https://www.checklist.email/'
+      href: 'https://www.dialecticalbehaviortherapy.com.ua/'
     }
     // {
     //   title: "Business Website",
