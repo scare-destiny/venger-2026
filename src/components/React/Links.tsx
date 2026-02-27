@@ -209,8 +209,8 @@ export default function Links() {
       isPrimary: true
     },
     {
-      title: 'Діалектично-поведінкова терапія',
-      description: 'Безкоштовний курс українською — навички для керування емоціями, стресом і стосунками',
+      title: 'Dialectical Behavior Therapy',
+      description: 'Free course for ukrainians — skills for managing emotions, stress, and relationships',
       icon: <MailOpen className='w-6 h-6'/>,
       href: 'https://www.dialecticalbehaviortherapy.com.ua/'
     }
