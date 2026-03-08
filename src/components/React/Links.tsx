@@ -205,14 +205,14 @@ export default function Links() {
       title: "coldbloom.tech",
       description: "Outbound infrastructure for AI agencies — cold email, personalized landing pages, and funnel visibility",
       icon: <Globe className="w-6 h-6" />,
-      href: "https://coldbloom.tech"
+      href: "https://coldbloom.tech",
+      isPrimary: true
     },
     {
       title: "Blog",
       description: "Discover my journey, projects, and thoughts",
       icon: <Globe className="w-6 h-6" />,
       href: "/",
-      isPrimary: true
     },
     {
       title: 'Dialectical Behavior Therapy',
