@@ -69,7 +69,7 @@ const LinkCard: React.FC<LinkCardProps> = ({ title, description, icon, href, isP
       className={`
         group relative block p-6 rounded-2xl border transition-all duration-300
         ${isPrimary 
-          ? 'bg-gradient-to-r from-pink-50 to-purple-50 border-pink-200 hover:border-pink-300 hover:shadow-lg hover:shadow-pink-100/50' 
+          ? 'bg-linear-to-r from-pink-50 to-purple-50 border-pink-200 hover:border-pink-300 hover:shadow-lg hover:shadow-pink-100/50' 
           : 'bg-white/80 border-gray-200 hover:border-gray-300 hover:shadow-lg hover:shadow-gray-100/50'
         }
         backdrop-blur-sm
@@ -207,6 +207,12 @@ export default function Links() {
       icon: <Globe className="w-6 h-6" />,
       href: "/",
       isPrimary: true
+    },
+    {
+      title: "coldbloom.tech",
+      description: "Outbound infrastructure for AI agencies — cold email, personalized landing pages, and funnel visibility",
+      icon: <Globe className="w-6 h-6" />,
+      href: "https://coldbloom.tech"
     },
     {
       title: 'Dialectical Behavior Therapy',
