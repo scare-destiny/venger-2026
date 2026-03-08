@@ -293,7 +293,7 @@ export default function Links() {
                 className="text-gray-600 text-lg"
                 variants={itemVariants}
               >
-                Data Guy • Reader • Creator
+                Entrepreneur • Reader • Creator
               </motion.p>
               <motion.div
                 className="w-16 h-0.5 bg-gradient-to-r from-pink-400 to-purple-400 mx-auto rounded-full"
